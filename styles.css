@@ -1,0 +1,122 @@
+:root {
+    --matrix-green: #00ff00;
+    --dark-bg: #000000;
+    --glow: 0 0 10px var(--matrix-green);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Courier New', monospace;
+    background: var(--dark-bg);
+    color: var(--matrix-green);
+    overflow: hidden;
+}
+
+.matrix-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.login-box, .documents-container {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    padding: 40px;
+    border: 1px solid var(--matrix-green);
+    box-shadow: var(--glow);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+h1 {
+    margin: 0 0 20px 0;
+    font-size: 2.5em;
+    text-shadow: var(--glow);
+}
+
+.glitch-text {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    animation: glitch 1s infinite;
+}
+
+.access-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: transparent;
+    border: 1px solid var(--matrix-green);
+    color: var(--matrix-green);
+    font-family: 'Courier New', monospace;
+}
+
+.access-form button {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid var(--matrix-green);
+    color: var(--matrix-green);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.access-form button:hover {
+    background: var(--matrix-green);
+    color: var(--dark-bg);
+}
+
+.documents-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border: 1px solid var(--matrix-green);
+    box-shadow: var(--glow);
+    max-width: 800px;
+    width: 100%;
+}
+
+.document-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.document-card {
+    border: 1px solid var(--matrix-green);
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.document-card:hover {
+    background: rgba(0, 255, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.document-icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0) }
+    20% { transform: translate(-2px, 2px) }
+    40% { transform: translate(-2px, -2px) }
+    60% { transform: translate(2px, 2px) }
+    80% { transform: translate(2px, -2px) }
+    100% { transform: translate(0) }
+}

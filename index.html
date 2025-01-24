@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Vault - Classified Documents</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="matrix-bg"></div>
+    
+    <div class="container">
+        <div class="login-box">
+            <h1>TECH VAULT</h1>
+            <div class="glitch-text">CLASSIFIED DOCUMENTS</div>
+            
+            <div class="access-form">
+                <input type="password" id="vault-password" placeholder="Enter Access Code">
+                <button onclick="checkAccess()">DECRYPT</button>
+            </div>
+            
+            <div class="status-text" id="status"></div>
+        </div>
+
+        <div class="documents-container" id="documents" style="display: none;">
+            <h2>Classified Files - DT Archives</h2>
+            <div class="document-grid">
+                <div class="document-card">
+                    <a href="https://media.defense.gov/2021/Jul/30/2002817264/-1/-1/0/JFK00062.PDF" target="_blank" style="text-decoration: none; color: #39ff14;">
+                        <div class="document-icon">🔒</div>
+                        <h3>JFK00062</h3>
+                        <p>Classification: TOP SECRET</p>
+                    </a>
+                </div>
+                <div class="document-card">
+                    <a href="https://media.defense.gov/2021/Jul/30/2002817258/-1/-1/0/JFK00068.PDF" target="_blank" style="text-decoration: none; color: #39ff14;">
+                    <div class="document-icon">🔒</div>
+                    <h3>JFK00068</h3>
+                    <p>Classification: CLASSIFIED</p>
+                    </a>
+                </div>
+                <div class="document-card">
+                    <a href="https://media.defense.gov/2021/Jul/30/2002817355/-1/-1/0/JFK00091.PDF" target="_blank" style="text-decoration: none; color: #39ff14;">
+                    <div class="document-icon">🔒</div>
+                    <h3>JFK00091</h3>
+                    <p>Classification: RESTRICTED</p>
+                    </a>
+                </div>
+            </div>
+            <div class="document-card">
+                <a href="https://media.defense.gov/2021/Jul/30/2002817165/-1/-1/0/JFK00049.PDF" target="_blank" style="text-decoration: none; color: #39ff14;">
+                <div class="document-icon">🔒</div>
+                <h3>JFK00049</h3>
+                <p>Classification: RESTRICTED</p>
+                </a>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
