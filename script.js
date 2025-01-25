@@ -1,9 +1,15 @@
+const bgAudio = new Audio('bg.mp3');
+bgAudio.loop = true;
+
 const VAULT_PASSWORD = "trump2024"; // Example password
 
 function checkAccess() {
     const status = document.getElementById("status");
     const documents = document.getElementById("documents");
     const loginBox = document.querySelector(".login-box");
+
+    // Play the audio
+    bgAudio.play();
 
     status.innerHTML = "ACCESS GRANTED";
     status.style.color = "#00ff00";
@@ -14,7 +20,11 @@ function checkAccess() {
         startMatrixRain();
     }, 1000);
 }
+
 document.addEventListener('DOMContentLoaded', function() {
+    // Auto play audio when page loads
+    bgAudio.play();
+    
     const canvas = document.createElement('canvas');
     canvas.className = 'matrix-rain';
     document.body.appendChild(canvas);
@@ -81,4 +91,13 @@ function startMatrixRain() {
     canvas.style.top = "0";
     canvas.style.left = "0";
     canvas.style.zIndex = "-1";
+}
+
+// Optional: Add this function if you want to toggle audio
+function toggleAudio() {
+    if (bgAudio.paused) {
+        bgAudio.play();
+    } else {
+        bgAudio.pause();
+    }
 }
