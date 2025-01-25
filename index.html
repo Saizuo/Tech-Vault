@@ -24,14 +24,14 @@
                 <br>
                 <br>
 
-            <button onclick="copyText(this)">CA : H2a9YWBch86AaeVRdG2vpTHSzcmWYGWfsFtxzfy8pump</button>
+            <button onclick="copyText(this)">CA : Coming Soon</button>
             <script>
             function copyText(button) {
-                const text = "H2a9YWBch86AaeVRdG2vpTHSzcmWYGWfsFtxzfy8pump";
+                const text = "";
                 navigator.clipboard.writeText(text).then(() => {
                     button.innerText = 'Copied!';
                     setTimeout(() => {
-                        button.innerText = 'CA : H2a9YWBch86AaeVRdG2vpTHSzcmWYGWfsFtxzfy8pump';
+                        button.innerText = 'CA : COMING SOON';
                     }, 2000);
                 }).catch(err => {
                     console.error('Failed to copy text: ', err);
