@@ -17,6 +17,23 @@
             <div class="access-form">
                 <input type="password" id="vault-password" placeholder="Enter Access Code">
                 <button onclick="checkAccess()">DECRYPT</button>
+                <br>
+                <br>
+
+            <button onclick="copyText(this)">CA : Coming Soon</button>
+            <script>
+            function copyText(button) {
+                const text = "Soon!";
+                navigator.clipboard.writeText(text).then(() => {
+                    button.innerText = 'Copied!';
+                    setTimeout(() => {
+                        button.innerText = 'Copy Access Code';
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy text: ', err);
+                });
+            }
+            </script>
             </div>
             
             <div class="status-text" id="status"></div>
